@@ -125,7 +125,7 @@ h1.title {
 
 #container {
   border: 1px solid #2a2a2a;
-  background: #ddd url(pattern.png);
+  background: #ddd image-url("pattern.png");
   box-shadow: 0 0 5px #b1b1b1;
 }
 
@@ -217,7 +217,7 @@ h5 {
 }
 
 .download-bar a.code {
-  background: transparent url(code.png) no-repeat 0 2px;
+  background: transparent image-url("code.png") no-repeat 0 2px;
   padding-left: 35px;
   margin-top: 8px;
   display: block;
@@ -253,7 +253,7 @@ h5 {
 .current-section a {
   float: right;
   text-indent: -10000px;
-  background: transparent url(top.png) no-repeat 0 0;
+  background: transparent image-url("top.png") no-repeat 0 0;
   width: 20px;
   height: 20px;
   opacity: 0.8;
@@ -276,7 +276,7 @@ h5 {
 
 a.zip,
 a.zip span {
-  background: transparent url(zip.png) no-repeat 0 0;
+  background: transparent image-url("zip.png") no-repeat 0 0;
   width: 30px;
   height: 21px;
   opacity: 0.8;
@@ -289,7 +289,7 @@ a.zip span {
 
 a.tar,
 a.tar span {
-  background: transparent url(tar.png) no-repeat 0 0;
+  background: transparent image-url("tar.png") no-repeat 0 0;
   width: 30px;
   height: 21px;
   opacity: 0.8;
@@ -301,7 +301,7 @@ a.tar span {
 }
 
 a.code {
-  background: transparent url(code.png) no-repeat 0 2px;
+  background: transparent image-url("code.png") no-repeat 0 2px;
   width: 30px;
   height: 21px;
   display: block;
