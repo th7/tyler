@@ -1,171 +1,152 @@
-<!doctype html>
 <!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
 <!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <%= stylesheet_link_tag 'from_github', media: 'screen, projection' %>
-  <%= stylesheet_link_tag 'print', media: 'print' %>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<%= stylesheet_link_tag 'from_github', media: 'screen, projection' %>
+<%= stylesheet_link_tag 'print', media: 'print' %>
+<%= javascript_include_tag 'application' %>
 
-  <title>th7.github.io</title>
-  <meta name="description" content="Hello, my name is Tyler.">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title"><a id="header-anchor" href="http://tylerhartland.com">Tyler Hartland</a></h1>
-    </header>
-    <div id="container">
-      <p class="tagline">
+<div class="wrapper">
+  <header>
+    <h1 class="title"><a id="header-anchor" href="http://tylerhartland.com">Tyler Hartland</a></h1>
+  </header>
+  <div id="container">
+    <p class="tagline">
       Minneapolis, MN | 612-812-4983 |
       <a href="mailto:tylerhartland7@gmail.com" target="_top">tylerhartland7@gmail.com</a> |
       <a href="https://github.com/th7">GitHub</a> |
       <a href="https://github.com/th7">LinkedIn</a>
-      </p>
-      <div id="main" role="main">
-        <div class="download-bar">
-          <div class="inner">
-          </div>
-          <span class="blc"></span><span class="trc"></span>
+    </p>
+    <div id="main" role="main">
+      <div class="download-bar">
+        <div class="inner">
         </div>
-
-        <ul class="tabs">
-            <li class="active"><a class="tag" href="#about-me">About Me</a></li>
-            <li><a class="tag" href="#resume">Resume</a></li>
-        </ul>
-
-        <article class="markdown-body tab" id="about-me">
-
-          <h2>About Me</h2>
-          <p>I build meaningful solutions.</p>
-
-          <!-- <img src="images/tyler_at_minnehaha.jpg"> -->
-          <%= image_tag 'tyler_at_minnehaha.jpg' %>
-
-          <p>I live in Minneapolis, MN. I left my job assessing noise/chemical exposures in November of 2012 and taught myself Android. I realized I need and want to work on a team, so I signed up for <a href="http://devbootcamp.com/learn-more/">Dev Bootcamp</a>. I am now equipped to contribute as a full-stack web or Android developer.</p>
-
-          <h3>Build Things</h3>
-
-          <p>As a kid, I once built a very tall car from K'nex. Being tall is cool, but the height also served a purpose: potential energy. I couldn't have defined the term at the time, but I knew I could put a heavy object up high, turn the string it was hanging on around with a pulley, and wrap it around an axle.  The vehicle moved on its own. Giving behavior to inanimate objects is <em>Fun</em>.</p>
-
-          <h3>Things that Matter</h3>
-
-          <p>For 5 years I supported people with developmental disabilities and mental illnesses. Service to others is not an alltruistic goal or ideal -- it's simply something I enjoy. I eventually felt there was more I could do, so I set out to become a doctor.</p>
-
-          <h3>Things that are Challenging</h3>
-
-          <p>I taught myself calculus after not using algebra or trigonometry for over 3 years. I took chemistry, physics, and biology for majors in one semester. I earned a score on the MCAT which is better than most doctors. It still didn't work out, and I moved on.</p>
-
-          <h3>Builds that Matter</h3>
-
-          <p>After college, I worked assessing noise and chemical exposures supported by software which could use UX redesign. I built a simple script to automate some data entry, and my coworkers were impressed and relieved. It had its own behavior, it mattered, but it wasn't all that challenging.</p>
-
-          <h3>Challenging Builds that Matter</h3>
-
-          <p>I built an Android app which enables on-the-go planning of air sampling. It works, it matters, and it was challenging, but getting the solution into users' hands involves much more than just writing the code.</p>
-
-          <h3>Build With Friends</h3>
-
-          <p>I want to see a product I helped build in users' hands. That goal is best achieved as part of a team. At Dev Bootcamp I've developed further technical skills, but more importantly I've practiced and refined my ability to communicate. I love the collaborative culture and practices at DBC.</p>
-
-          <h2>The Rest of the Story</h2>
-
-          <p>I'm looking for opportunities for further collaboration and continuous learning. I'd love to talk more! The world is filled with interesting projects. <a href="mailto:tylerhartland7@gmail.com" target="_top">Tell me about yours!</a></p>
-
-        </article>
-
-        <article class="markdown-body tab" id="resume">
-
-          <h2>Resume</h2>
-          <h3>Skills</h3>
-          <p>Android, Ruby on Rails, Ruby, JavaScript, HTML, CSS, Git, Rspec, Jasmine, TDD</p>
-
-          <hr>
-          <h3>Projects</h3>
-
-          <h4>Viaggio</h4>
-          <p><a href="http://viagg.io" target="_blank">Viaggio</a><a href="https://github.com/th7/journey-tracker" target="_blank">(github)</a> makes use of the D3 Javascript library, Rspec, Jasmine, Travis CI, Sidekiq background jobs, and more.</p>
-
-          <h4>Wiki-Racer</h4>
-          <p><a href="https://github.com/th7/wiki-racer" target="_blank">Wiki-Racer</a> was an early experiment in Ruby before any formal education. It solves a complicated shortest-path problem, and it's fun!</p>
-
-          <hr>
-          <h3>Experience</h3>
-
-          <h4>Teaching Assistant</h4>
-          <h5>Dev Bootcamp</h5>
-          <p>August 2013</p>
-          <p class="clear">Dev Bootcamp is an intensive program covering Ruby, SQL, ActiveRecord, HTML, CSS, Javascript, Sinatra, and Rails. More importantly, Dev Bootcamp strongly emphasizes collaboration and feedback. Conducted code reviews and assisted in refactoring code. Assisted students in completing core challenges and projects.</p>
-
-          <h4>Industrial Hygiene Technician</h4>
-          <h5>Aerotek</h5>
-          <p>2011 - 2012</p>
-          <p class="clear">Analyzed risks of noise and chemical exposures using scientific and statistical methods.</p>
-
-          <h4>English Teacher</h4>
-          <h5>Web International English</h5>
-          <p>September 2010 - December 2010</p>
-          <p class="clear">Taught English as a second language to students in private lessons, groups of 5-10, and classes of 40+.</p>
-
-          <h4>Behavior Modification Assistant</h4>
-          <h5>State of Minnesota</h5>
-          <p>January 2007 - July 2008</p>
-          <p class="clear">Supported individuals with mental illness and/or developmental disabilities who were at risk of losing community placement.</p>
-
-          <hr>
-          <h3>Interests</h3>
-
-          <p>My family.
-
-          Making things work really well and then celebrating with music, food, and drink.
-
-          I used to do flips on wakeboards and snowboards, but my odds of doing so again without serious injury are steadily declining. I'll find time to ride again (in a more relaxing manner) someday soon.</p>
-          <hr>
-          <h3>Education</h3>
-
-          <h4>Dev Bootcamp</h4>
-
-          <h5>Web Development</h5>
-          <p>2013</p>
-
-          <p class="clear"></p>
-
-          <h4>University of Minnesota</h4>
-          <h5>Biology(B.S.)</h5>
-          <p>2008 – 2011</p>
-
-          <h4>Hennepin Technical College</h4>
-          <h5>EMT-B</h5>
-          <p>2011</p>
-
-        </article>
+        <span class="blc"></span><span class="trc"></span>
       </div>
+
+      <ul class="tabs">
+          <li class="active"><a class="tag" href="#about-me">About Me</a></li>
+          <li><a class="tag" href="#resume">Resume</a></li>
+      </ul>
+
+      <article class="markdown-body tab" id="about-me">
+
+        <h2>About Me</h2>
+        <p>I build meaningful solutions.</p>
+
+        <%= image_tag 'tyler_at_minnehaha.jpg' %>
+
+        <p>I live in Minneapolis, MN. I left my job assessing noise/chemical exposures in November of 2012 and taught myself Android. I realized I need and want to work on a team, so I signed up for <a href="http://devbootcamp.com/learn-more/">Dev Bootcamp</a>. I am now equipped to contribute as a full-stack web or Android developer.</p>
+
+        <h3>Build Things</h3>
+
+        <p>As a kid, I once built a very tall car from K'nex. Being tall is cool, but the height also served a purpose: potential energy. I couldn't have defined the term at the time, but I knew I could put a heavy object up high, turn the string it was hanging on around with a pulley, and wrap it around an axle.  The vehicle moved on its own. Giving behavior to inanimate objects is <em>Fun</em>.</p>
+
+        <h3>Things that Matter</h3>
+
+        <p>For 5 years I supported people with developmental disabilities and mental illnesses. Service to others is not an alltruistic goal or ideal -- it's simply something I enjoy. I eventually felt there was more I could do, so I set out to become a doctor.</p>
+
+        <h3>Things that are Challenging</h3>
+
+        <p>I taught myself calculus after not using algebra or trigonometry for over 3 years. I took chemistry, physics, and biology for majors in one semester. I earned a score on the MCAT which is better than most doctors. It still didn't work out, and I moved on.</p>
+
+        <h3>Builds that Matter</h3>
+
+        <p>After college, I worked assessing noise and chemical exposures supported by software which could use UX redesign. I built a simple script to automate some data entry, and my coworkers were impressed and relieved. It had its own behavior, it mattered, but it wasn't all that challenging.</p>
+
+        <h3>Challenging Builds that Matter</h3>
+
+        <p>I built an Android app which enables on-the-go planning of air sampling. It works, it matters, and it was challenging, but getting the solution into users' hands involves much more than just writing the code.</p>
+
+        <h3>Build With Friends</h3>
+
+        <p>I want to see a product I helped build in users' hands. That goal is best achieved as part of a team. At Dev Bootcamp I've developed further technical skills, but more importantly I've practiced and refined my ability to communicate. I love the collaborative culture and practices at DBC.</p>
+
+        <h2>The Rest of the Story</h2>
+
+        <p>I'm looking for opportunities for further collaboration and continuous learning. I'd love to talk more! The world is filled with interesting projects. <a href="mailto:tylerhartland7@gmail.com" target="_top">Tell me about yours!</a></p>
+
+      </article>
+
+      <article class="markdown-body tab" id="resume">
+
+        <h2>Resume</h2>
+        <h3>Skills</h3>
+        <p>Android, Ruby on Rails, Ruby, JavaScript, HTML, CSS, Git, Rspec, Jasmine, TDD</p>
+
+        <hr>
+        <h3>Projects</h3>
+
+        <h4>Viaggio</h4>
+        <p><a href="http://viagg.io" target="_blank">Viaggio</a><a href="https://github.com/th7/journey-tracker" target="_blank">(github)</a> makes use of the D3 Javascript library, Rspec, Jasmine, Travis CI, Sidekiq background jobs, and more.</p>
+
+        <h4>Wiki-Racer</h4>
+        <p><a href="https://github.com/th7/wiki-racer" target="_blank">Wiki-Racer</a> was an early experiment in Ruby before any formal education. It solves a complicated shortest-path problem, and it's fun!</p>
+
+        <hr>
+        <h3>Experience</h3>
+
+        <h4>Teaching Assistant</h4>
+        <h5>Dev Bootcamp</h5>
+        <p>August 2013</p>
+        <p class="clear">Dev Bootcamp is an intensive program covering Ruby, SQL, ActiveRecord, HTML, CSS, Javascript, Sinatra, and Rails. More importantly, Dev Bootcamp strongly emphasizes collaboration and feedback. Conducted code reviews and assisted in refactoring code. Assisted students in completing core challenges and projects.</p>
+
+        <h4>Industrial Hygiene Technician</h4>
+        <h5>Aerotek</h5>
+        <p>2011 - 2012</p>
+        <p class="clear">Analyzed risks of noise and chemical exposures using scientific and statistical methods.</p>
+
+        <h4>English Teacher</h4>
+        <h5>Web International English</h5>
+        <p>September 2010 - December 2010</p>
+        <p class="clear">Taught English as a second language to students in private lessons, groups of 5-10, and classes of 40+.</p>
+
+        <h4>Behavior Modification Assistant</h4>
+        <h5>State of Minnesota</h5>
+        <p>January 2007 - July 2008</p>
+        <p class="clear">Supported individuals with mental illness and/or developmental disabilities who were at risk of losing community placement.</p>
+
+        <hr>
+        <h3>Interests</h3>
+
+        <p>My family.
+
+        Making things work really well and then celebrating with music, food, and drink.
+
+        I used to do flips on wakeboards and snowboards, but my odds of doing so again without serious injury are steadily declining. I'll find time to ride again (in a more relaxing manner) someday soon.</p>
+        <hr>
+        <h3>Education</h3>
+
+        <h4>Dev Bootcamp</h4>
+
+        <h5>Web Development</h5>
+        <p>2013</p>
+
+        <p class="clear"></p>
+
+        <h4>University of Minnesota</h4>
+        <h5>Biology(B.S.)</h5>
+        <p>2008 – 2011</p>
+
+        <h4>Hennepin Technical College</h4>
+        <h5>EMT-B</h5>
+        <p>2011</p>
+
+      </article>
     </div>
-    <footer>
-      <div class="owner">
-
-      <p><a href="https://github.com/th7" class="avatar"><img src="https://secure.gravatar.com/avatar/ecb28b858e3f8d97e0544d44da74fff2?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a>View <a href="https://github.com/th7">th7</a> on <a href="https://www.github.com">GitHub</a></p>
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
   </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/th7/th7.github.io/tarball/master" class="tar">tar</a><a href="https://github.com/th7/th7.github.io/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
+  <footer>
+    <div class="owner">
 
+    <p><a href="https://github.com/th7" class="avatar"><img src="https://secure.gravatar.com/avatar/ecb28b858e3f8d97e0544d44da74fff2?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a>View <a href="https://github.com/th7">th7</a> on <a href="https://www.github.com">GitHub</a></p>
 
-</body>
-</html>
+    </div>
+    <div class="creds">
+      <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+    </div>
+  </footer>
+</div>
+<div class="current-section">
+  <a href="#top">Scroll to top</a>
+  <p class="name"></p>
+</div>
+
