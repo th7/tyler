@@ -565,7 +565,6 @@ footer .owner p a {
 
 .markdown-body img {
   max-width: 100%;
-  @include box-sizing(border-box);
 }
 
 .highlight  { background: #ffffff; }
