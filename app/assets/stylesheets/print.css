@@ -77,6 +77,14 @@ h1 a {
   float: none;
 }
 
+#resume {
+  display: block;
+}
+
 #about-me {
   display: none !important;
+}
+
+#resume-links {
+  display: none;
 }
