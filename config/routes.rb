@@ -1,5 +1,8 @@
 Tyler::Application.routes.draw do
   root 'home#index'
+  post 'utility_droid/register' => 'utility_droid#register'
+  post 'utility_droid/send' => 'utility_droid#send_sms'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
