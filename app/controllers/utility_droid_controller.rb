@@ -1,5 +1,7 @@
 class UtilityDroidController < ApplicationController
-  skip_before_filter :verify_authenticity_token, only: [:send_sms, :register]
+  skip_before_filter :verify_authenticity_token, only: [:get_sms, :send_sms, :register]
+  before_action :check_auth
+
   def register
     user = User.find_by_username(params[:user][:username])
     return 500 unless user.password == params[:user][:password]
@@ -17,8 +19,6 @@ class UtilityDroidController < ApplicationController
   end
 
   def send_sms
-    user = User.find_by_username(params[:user][:username])
-    return 500 unless user.password == params[:user][:password]
     reg_id = user.registration_id
     server = 'https://android.googleapis.com'
     path = '/gcm/send'
@@ -39,5 +39,16 @@ class UtilityDroidController < ApplicationController
 
     resp = RestClient.post(full_url, new_params.to_json, header)
     render :nothing => true, :status => 200, :content_type => 'text/html'
+  end
+
+  def get_sms
+    render :json => SmsMessage.order('sent_at DESC').limit(params[:quantity]).offset(params[:offset])
+  end
+
+  private
+
+  def check_auth
+    user = User.find_by_username(params[:user][:username])
+    render 500 unless user.password == params[:user][:password]
   end
 end
