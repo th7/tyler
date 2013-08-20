@@ -3,18 +3,12 @@ class UtilityDroidController < ApplicationController
   before_action :check_auth
 
   def register
-    user = User.find_by_username(params[:user][:username])
-    return 500 unless user.password == params[:user][:password]
-    if user
-      user.registration_id = params[:user][:registration_id]
-    else
-      user = User.new(params[:user])
-    end
+    current_user.registration_id = params[:user][:registration_id]
 
-    if user.save
+    if current_user.save
       render :nothing => true, :status => 200, :content_type => 'text/html'
     else
-      return 500
+      render :status => :bad_request, :text => ''
     end
   end
 
@@ -46,7 +40,7 @@ class UtilityDroidController < ApplicationController
   end
 
   def save_sms
-    params[:sms] = JSON.parse(params[:sms])
+    # params[:sms] = JSON.parse(params[:sms])
     sms = SmsMessage.new(sms_params)
     if sms.save
       render :nothing => true, :status => 200, :content_type => 'text/html'
