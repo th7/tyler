@@ -1,5 +1,5 @@
 class UtilityDroidController < ApplicationController
-  skip_before_filter :verify_authenticity_token, only: [:get_sms, :send_sms, :register]
+  skip_before_filter :verify_authenticity_token, only: [:get_sms, :send_sms, :register, :save_sms]
   before_action :check_auth
 
   def register
@@ -45,9 +45,23 @@ class UtilityDroidController < ApplicationController
     render :json => SmsMessage.order('sent_at DESC').limit(params[:quantity]).offset(params[:offset])
   end
 
+  def save_sms
+    params[:sms] = JSON.parse(params[:sms])
+    sms = SmsMessage.new(sms_params)
+    if sms.save
+      render :nothing => true, :status => 200, :content_type => 'text/html'
+    else
+      render :status => :bad_request, :text => ''
+    end
+  end
+
   private
 
   def check_auth
     render :status => :bad_request, :text => '' unless current_user
+  end
+
+  def sms_params
+    params.require(:sms).permit(:text, :from, :sent_at)
   end
 end
