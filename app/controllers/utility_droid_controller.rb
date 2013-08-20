@@ -19,7 +19,7 @@ class UtilityDroidController < ApplicationController
   end
 
   def send_sms
-    reg_id = user.registration_id
+    reg_id = current_user.registration_id
     server = 'https://android.googleapis.com'
     path = '/gcm/send'
     full_url = server + path
@@ -48,7 +48,6 @@ class UtilityDroidController < ApplicationController
   private
 
   def check_auth
-    user = User.find_by_username(params[:user][:username])
-    render 500 unless user.password == params[:user][:password]
+    render :status => :bad_request, :text => '' unless current_user
   end
 end
