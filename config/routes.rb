@@ -7,4 +7,6 @@ Tyler::Application.routes.draw do
   post 'sms/save' => 'utility_droid#save_sms'
 
   get 'pdf' => 'home#pdf'
+
+  resources :dns
 end
