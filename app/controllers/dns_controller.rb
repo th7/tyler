@@ -1,5 +1,5 @@
 class DnsController < ApplicationController
-  before_action :check_auth
+  before_action :check_auth, only: :upsert
 
   def remote_ip
     render json: request.remote_ip
