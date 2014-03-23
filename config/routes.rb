@@ -8,5 +8,8 @@ Tyler::Application.routes.draw do
 
   get 'pdf' => 'home#pdf'
 
-  resources :dns
+  get 'dns' => 'dns#remote_ip'
+  get 'dns/:id/check_ip' => 'dns#check_ip'
+  get 'dns/:id/*route' => 'dns#redirect'
+  post 'dns' => 'dns#upsert'
 end
